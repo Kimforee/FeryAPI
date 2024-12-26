@@ -1,22 +1,4 @@
-### **Part Five: Documentation and README Setup**
-
----
-
-#### **Objective**  
-Write comprehensive documentation for your API and create a `README.md` file that includes setup instructions, API endpoints, and testing guidance.
-
----
-
-### **Step-by-Step Instructions**
-
----
-
-#### **1. Create the `README.md` File**
-1. In the root directory of your project, create a file named `README.md`.  
-2. Add the following content to the file:
-
-   ```markdown
-   # Ride Management API
+# Ride Management API
 
    ## Overview
    This is a simple API for managing users and rides. The API includes endpoints for:
@@ -39,12 +21,13 @@ Write comprehensive documentation for your API and create a `README.md` file tha
    ### Steps
    1. Clone the repository:
       ```bash
-      git clone <repository-url>
-      cd <repository-name>
+      git clone https://github.com/Kimforee/FeryAPI
+      cd FeryAPI
       ```
    2. Install dependencies:
       ```bash
       npm install
+      npm install mongoose
       ```
    3. Set up the `.env` file:
       - Create a `.env` file in the root directory.
@@ -57,6 +40,18 @@ Write comprehensive documentation for your API and create a `README.md` file tha
       ```bash
       npm run dev
       ```
+      **Response:**
+      ```bash
+      > ride-api@1.0.0 dev
+      > nodemon server.js 
+      [nodemon] 3.1.9
+      [nodemon] to restart at any time, enter `rs`  
+      [nodemon] watching path(s): *.*
+      [nodemon] watching extensions: js,mjs,cjs,json
+      [nodemon] starting `node server.js`
+      Server running on port 5000
+      MongoDB Connected: ride-shard-00-01.chhcg.mongodb.net
+      ```
 
    ## API Endpoints
 
@@ -65,67 +60,28 @@ Write comprehensive documentation for your API and create a `README.md` file tha
    **Request Body:**  
    ```json
    {
-       "username": "testuser",
+       "username": "testuser2",
        "password": "securepassword"
    }
    ```  
    **Response:**  
-   ```json
-   {
-       "message": "User registered successfully.",
-       "userId": "64f4f22a6b12a345678d9012"
-   }
-   ```
+   ![image](https://github.com/user-attachments/assets/a791cea3-3ab8-43ee-85d3-71cab5b9990c)
 
    ### 2. List Rides
-   **Endpoint:** `GET /api/rides`  
-   **Response:**  
-   ```json
-   {
-       "message": "Rides fetched successfully.",
-       "rides": [
-           {
-               "id": "1",
-               "distance": "15 km",
-               "fare": "$12.50"
-           },
-           {
-               "id": "2",
-               "distance": "8 km",
-               "fare": "$8.00"
-           },
-           {
-               "id": "3",
-               "distance": "20 km",
-               "fare": "$15.75"
-           }
-       ]
-   }
-   ```
+   **Endpoint:** `GET /api/rides` 
+   **Response:**
+   
+   ![image](https://github.com/user-attachments/assets/925b9696-a4f7-4965-8691-963114f07e68)
 
    ### 3. Ride Details
    **Endpoint:** `GET /api/rides/:id`  
    **Response (Valid ID):**  
-   ```json
-   {
-       "message": "Ride details fetched successfully.",
-       "ride": {
-           "id": "1",
-           "distance": "15 km",
-           "fare": "$12.50",
-           "pickup": "123 Main St",
-           "dropoff": "456 Elm St",
-           "driver": "John Doe",
-           "vehicle": "Toyota Prius"
-       }
-   }
-   ```  
-   **Response (Invalid ID):**  
-   ```json
-   {
-       "message": "Ride not found."
-   }
-   ```
+   ![image](https://github.com/user-attachments/assets/670fca7e-7664-484f-bfa3-3d66b62af428)
+   
+   **Response (Invalid ID):**
+   
+   ![image](https://github.com/user-attachments/assets/479c0fbb-f5f3-4eab-85fe-ab859f31a74b)
+
 
    ## Testing
    - Use **Postman** or **cURL** to test the endpoints.
@@ -148,12 +104,3 @@ Write comprehensive documentation for your API and create a `README.md` file tha
    ├── .env
    ├── README.md
    ```
-
-   ## License
-   This project is open-source and available under the [MIT License](LICENSE).
-   ```
-
-#### **4. Test Setup and Endpoints**
-1. Clone the repository into a new directory to simulate a fresh setup.
-2. Follow the setup instructions in the `README.md` file.
-3. Test all endpoints using Postman or cURL.
