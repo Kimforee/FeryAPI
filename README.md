@@ -5,6 +5,35 @@
    - Registering users
    - Listing rides
    - Fetching ride details
+     
+   ## API Endpoints
+
+   ### 1. Register User
+   **Endpoint:** `POST /api/users/register`  
+   **Request Body:**  
+   ```json
+   {
+       "username": "testuser2",
+       "password": "securepassword"
+   }
+   ```  
+   **Response:**  
+   ![image](https://github.com/user-attachments/assets/a791cea3-3ab8-43ee-85d3-71cab5b9990c)
+
+   ### 2. List Rides
+   **Endpoint:** `GET /api/rides` 
+   **Response:**
+   
+   ![image](https://github.com/user-attachments/assets/925b9696-a4f7-4965-8691-963114f07e68)
+
+   ### 3. Ride Details
+   **Endpoint:** `GET /api/rides/:id`  
+   **Response (Valid ID):**  
+   ![image](https://github.com/user-attachments/assets/670fca7e-7664-484f-bfa3-3d66b62af428)
+   
+   **Response (Invalid ID):**
+   
+   ![image](https://github.com/user-attachments/assets/479c0fbb-f5f3-4eab-85fe-ab859f31a74b)
 
    ## Tech Stack
    - Node.js
@@ -53,34 +82,6 @@
       MongoDB Connected: ride-shard-00-01.chhcg.mongodb.net
       ```
 
-   ## API Endpoints
-
-   ### 1. Register User
-   **Endpoint:** `POST /api/users/register`  
-   **Request Body:**  
-   ```json
-   {
-       "username": "testuser2",
-       "password": "securepassword"
-   }
-   ```  
-   **Response:**  
-   ![image](https://github.com/user-attachments/assets/a791cea3-3ab8-43ee-85d3-71cab5b9990c)
-
-   ### 2. List Rides
-   **Endpoint:** `GET /api/rides` 
-   **Response:**
-   
-   ![image](https://github.com/user-attachments/assets/925b9696-a4f7-4965-8691-963114f07e68)
-
-   ### 3. Ride Details
-   **Endpoint:** `GET /api/rides/:id`  
-   **Response (Valid ID):**  
-   ![image](https://github.com/user-attachments/assets/670fca7e-7664-484f-bfa3-3d66b62af428)
-   
-   **Response (Invalid ID):**
-   
-   ![image](https://github.com/user-attachments/assets/479c0fbb-f5f3-4eab-85fe-ab859f31a74b)
 
 
    ## Testing
