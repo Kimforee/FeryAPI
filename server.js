@@ -15,9 +15,9 @@ app.use(express.json());
 connectDB();
 
 // API Endpoints placeholder
-app.get('/', (req, res) => {
-    res.send('API is running...');
-});
+app.get('', (req, res) => {
+    res.redirect('/api-docs');
+  });
 
 // Start server
 const PORT = process.env.PORT || 5000;
@@ -27,7 +27,11 @@ app.listen(PORT, () => {
 
 const userRoutes = require('./routes/userRoutes');
 const rideRoutes = require('./routes/rideRoutes');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocs = require('./utils/swagger');
 
+// Swagger UI setup
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 // Use user routes
 app.use('/api/users', userRoutes);
 // Use ride routes
