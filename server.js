@@ -16,7 +16,7 @@ connectDB();
 
 // API Endpoints placeholder
 app.get('/', (req, res) => {
-    res.redirect('/api-docs');
+    res.redirect('/api-docs/');
   });
 
 // Start server
