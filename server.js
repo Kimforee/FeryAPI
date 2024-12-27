@@ -15,7 +15,7 @@ app.use(express.json());
 connectDB();
 
 // API Endpoints placeholder
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.redirect('/api-docs');
   });
 
