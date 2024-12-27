@@ -19,6 +19,11 @@ app.get('/', (req, res) => {
     res.redirect('/api-docs/');
   });
 
+app.get('/debug-env', (req, res) => {
+  res.json({ mongoUri: process.env.MONGO_URI });
+});
+
+
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
