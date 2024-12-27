@@ -14,7 +14,8 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: serverUrl,
+                url: 'https://fery-nx4xoudi9-kimforees-projects.vercel.app',
+                url: 'https://fery-api.vercel.app'
             },
         ],
     },
