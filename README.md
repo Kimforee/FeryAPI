@@ -1,4 +1,5 @@
 # Ride Management API
+Deployed at this Domain using vercel might be slow because of MongoDB cloud : https://fery-api.vercel.app/api-docs/debug-env#
 
    ## Overview
    This is a simple API for managing users and rides. The API includes endpoints for:
